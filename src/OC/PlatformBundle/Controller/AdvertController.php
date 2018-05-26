@@ -6,6 +6,7 @@ namespace OC\PlatformBundle\Controller;
 
 // N'oubliez pas ce use :
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class AdvertController extends Controller
@@ -21,15 +22,11 @@ class AdvertController extends Controller
 		return new Response($content);
 		}
 
-		public function viewAction(){
-	        // On veut avoir l'URL de l'annonce d'id 5.
-		        $url = $this->get('router')->generate(
-		            'oc_platform_view', // 1er argument : le nom de la route
-		            array('id' => 5)    // 2e argument : les valeurs des paramètres
-		        );
-		        // $url vaut « /platform/advert/5 »
+		public function viewAction($id, Request $request){
+
+			$tag = $request->query->get('tag');
 	        
-	        return new Response("L'URL de l'annonce d'id 5 est : ".$url);
+	        return new Response("Le tag est : ".$tag);
 		}
 		public function viewSlugAction($year, $slug, $format)
 		{
