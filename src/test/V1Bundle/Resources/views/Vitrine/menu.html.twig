@@ -1,0 +1,6 @@
+
+<ul>
+	{% for nomMenu in listMenu %}
+	<li><a href="{{ nomMenu['lien'] }}" alt="{{ nomMenu['alt'] }}">{{ nomMenu['name'] }}</a></li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,34 @@
+
+{% extends "testV1Bundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+
+{% block body %}
+    <h1>Bienvenue sur mon site</h1>
+
+    	<p>Bonjour, je suis {{infoPersonnel['prenom']}}, {{infoPersonnel['nom']}}.</p>
+    	<p>Pour voir mes travaux c'est ici : <a href="{{ path('travaux')}}"> Mes travaux</a></p>
+
+			<h3>Formulaire</h3>
+
+		<div>
+			
+		</div>
+
+	{% for userdata in user %}
+		<ul>
+			<li>{{userdata.firstname}}</li>
+			<li>{{userdata.lastname}}</li>
+			<li>{{userdata.password}}</li>
+			<li>{{userdata.pseudo}}</li>
+		</ul>
+	{% endfor %}
+
+
+
+
+
+{% endblock %}
+
+

@@ -1,0 +1,24 @@
+
+accueil: 
+    path:     /blog
+    defaults: { _controller: testV1Bundle:Vitrine:index }
+
+travaux: 
+    path:     /blog/travaux
+    defaults: { _controller: testV1Bundle:Vitrine:travaux }
+
+actu: 
+    path:     /blog/actu
+    defaults: { _controller: testV1Bundle:Vitrine:actu }
+
+inscription:
+    path:     /blog/inscription
+    defaults: { _controller: testV1Bundle:Vitrine:inscription}
+
+connexion:
+    path:     /blog/connexion
+    defaults: { _controller: testV1Bundle:Vitrine:connexion}
+
+admin:
+    path:     /blog/admin
+    defaults: { _controller: testV1Bundle:Vitrine:admin}

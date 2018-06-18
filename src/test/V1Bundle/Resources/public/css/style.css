@@ -1,0 +1,39 @@
+a {
+	text-decoration: none;
+	color: black;
+}
+
+ul{
+	padding: 0px;
+	margin: 0px;
+}
+
+li{
+	list-style: none;
+}
+
+#menu{
+	text-align: center;
+	background-color: #efefef;
+	padding: 9px 0px;
+	position: sticky;
+    top: 0;
+}
+
+#menu li {
+	display: inline;
+	margin: 0px 20px;
+	font-size: 15pt;
+}
+
+#menu li a:hover {
+	border-bottom: 2px solid #f58906;
+	padding-bottom: 2px;
+	text-decoration: none;
+	color: black;
+}
+
+footer{
+	text-align: center;
+}
+
